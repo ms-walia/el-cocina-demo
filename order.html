@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order takeaway — El Cocina, Amritsar</title>
+<meta name="description" content="Order El Cocina takeaway: choose your dishes and a pickup time.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<header class="p-head"><a class="p-mark" href="index.html">El&nbsp;Cocina</a>
+  <nav class="p-nav" aria-label="Main"><a href="index.html">Home</a><a href="index.html#carte">Menu</a><a href="order.html" aria-current="page">Order takeaway</a><a href="reserve.html">Reserve a table</a></nav></header>
+<main class="p-main">
+  <div class="p-intro">
+    <p class="p-eyebrow">Takeaway</p>
+    <h1 class="p-title">Take the kitchen <em>home</em></h1>
+    <p class="p-lede">Choose your dishes and a pickup time. Your order is sent to us on WhatsApp for confirmation.</p>
+  </div>
+  <div class="p-grid">
+    <div id="order-menu"></div>
+    <div class="o-side">
+      <div id="cart-box" class="p-card">
+        <h2>Your order <span id="cart-count" style="font-size:16px;color:var(--gold)">0</span></h2>
+        <ul class="o-cart" id="cart-lines"></ul>
+        <div class="o-total"><span>Total</span><strong id="cart-total">₹ 0</strong></div>
+        <form id="order-form" class="f-grid" novalidate>
+          <label class="f-field f-wide"><span>Name</span><input class="f-control" name="name" type="text" autocomplete="name" required></label>
+          <label class="f-field f-wide"><span>Phone</span><input class="f-control" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9+\s\(\)\-]{8,}" required></label>
+          <label class="f-field"><span>Pickup day</span><select class="f-control" name="day" required></select></label>
+          <label class="f-field"><span>Pickup time</span><select class="f-control" name="time" required></select></label>
+          <p class="f-hint f-wide" id="pickup-msg"></p>
+          <label class="f-field f-wide"><span>Note for the kitchen</span><textarea class="f-control" name="note" rows="2"></textarea></label>
+          <div class="f-wide"><button class="p-btn" type="submit" name="place" disabled>Place order</button></div>
+        </form>
+      </div>
+      <div class="p-done" id="order-done" tabindex="-1" hidden>
+        <p class="p-eyebrow">One last step</p>
+        <h2>Send your order on WhatsApp</h2>
+        <p id="order-summary"></p>
+        <ol class="p-steps"><li>Tap the button below — your order opens in WhatsApp.</li><li>Press send. We confirm the order and pickup time.</li></ol>
+        <p class="f-hint">Your order isn't with us until the message is sent.</p>
+        <a class="p-btn" id="order-wa" href="#" target="_blank" rel="noopener">Send on WhatsApp</a>
+        <a class="p-btn p-btn--ghost" href="tel:+916284558355">Or call +91 6284-558355</a>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="p-foot">© 2026 El Cocina · GT Road, Amritsar · <a href="tel:+916284558355">+91 6284-558355</a></footer>
+<script src="js/config.js"></script>
+<script src="js/menu-data.js"></script>
+<script src="js/booking.js"></script>
+<script src="js/order.js"></script>
+</body>
+</html>

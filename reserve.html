@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reserve a table — El Cocina, Amritsar</title>
+<meta name="description" content="Reserve a table at El Cocina, GT Road, Amritsar. Lunch and dinner, Tuesday to Sunday.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<header class="p-head"><a class="p-mark" href="index.html">El&nbsp;Cocina</a>
+  <nav class="p-nav" aria-label="Main"><a href="index.html">Home</a><a href="index.html#carte">Menu</a><a href="order.html">Order takeaway</a><a href="reserve.html" aria-current="page">Reserve a table</a></nav></header>
+<main class="p-main">
+  <div class="p-intro">
+    <p class="p-eyebrow">Reservations</p>
+    <h1 class="p-title">The table is yours <em>when you want it</em></h1>
+    <p class="p-lede">Choose a date, time and party size. Your request is sent to us on WhatsApp, and we confirm by phone.</p>
+  </div>
+  <div class="p-grid">
+    <div>
+      <form id="reserve-form" class="f-grid" novalidate>
+        <label class="f-field f-wide"><span>Name</span><input class="f-control" name="name" type="text" autocomplete="name" required></label>
+        <label class="f-field f-wide"><span>Phone</span><input class="f-control" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9+\s\(\)\-]{8,}" required></label>
+        <label class="f-field"><span>Date</span><input class="f-control" name="date" type="date" required></label>
+        <label class="f-field"><span>Time</span><select class="f-control" name="time" required></select></label>
+        <p class="f-warn f-wide" id="time-msg" role="status"></p>
+        <label class="f-field"><span>Guests</span><select class="f-control" name="guests"></select></label>
+        <p class="f-hint" id="big-group" style="align-self:end"></p>
+        <label class="f-field f-wide"><span>Anything we should know</span><textarea class="f-control" name="note" rows="3"></textarea></label>
+        <div class="f-wide"><button class="p-btn" type="submit">Request a table</button></div>
+      </form>
+      <div class="p-done" id="reserve-done" tabindex="-1" hidden>
+        <p class="p-eyebrow">One last step</p>
+        <h2>Send it to us on WhatsApp</h2>
+        <p id="reserve-summary"></p>
+        <ol class="p-steps"><li>Tap the button below — a message with your details opens in WhatsApp.</li><li>Press send. We confirm your table by phone.</li></ol>
+        <p class="f-hint">Your request isn't with us until the message is sent.</p>
+        <a class="p-btn" id="reserve-wa" href="#" target="_blank" rel="noopener">Send on WhatsApp</a>
+        <a class="p-btn p-btn--ghost" href="tel:+916284558355">Or call +91 6284-558355</a>
+      </div>
+    </div>
+    <aside class="p-card">
+      <h2>Visit</h2>
+      <dl class="p-info">
+        <div><dt>Address</dt><dd>GT Road, Amritsar, Punjab 143001</dd></div>
+        <div><dt>Hours</dt><dd>Tue–Sun · 12:00pm–3:30pm<br>Dinner &amp; bar · 6:30pm–12:00am<br><span style="color:rgba(232,226,214,.5)">Monday closed</span></dd></div>
+        <div><dt>Reservations</dt><dd><a href="tel:+916284558355">+91 6284-558355</a></dd></div>
+      </dl>
+    </aside>
+  </div>
+</main>
+<footer class="p-foot">© 2026 El Cocina · GT Road, Amritsar · <a href="tel:+916284558355">+91 6284-558355</a></footer>
+<script src="js/config.js"></script>
+<script src="js/booking.js"></script>
+<script src="js/reserve.js"></script>
+</body>
+</html>
